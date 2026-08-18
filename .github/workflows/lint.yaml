@@ -13,7 +13,7 @@ jobs:
     name: editorconfig
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Run editorconfig-checker
         uses: editorconfig-checker/action-editorconfig-checker@v2
 
@@ -21,7 +21,7 @@ jobs:
     name: yamllint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Run yamllint
         uses: ibiqlik/action-yamllint@v3
         with:
@@ -31,7 +31,7 @@ jobs:
     name: actionlint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Run actionlint
         uses: raven-actions/actionlint@v2
 
@@ -39,7 +39,7 @@ jobs:
     name: sqlfluff
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
@@ -52,7 +52,7 @@ jobs:
     name: docker-compose-validate
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Validate compose config
         env:
           POSTGRES_USER: ci
