@@ -1,0 +1,18 @@
+---
+extends: default
+
+rules:
+  line-length:
+    max: 100
+    level: warning
+  indentation:
+    spaces: 2
+    indent-sequences: true
+  document-start: disable
+  truthy:
+    # Allow GitHub Actions "on:" trigger key.
+    allowed-values: ["true", "false", "on", "off"]
+    check-keys: true
+
+ignore: |
+  out/
